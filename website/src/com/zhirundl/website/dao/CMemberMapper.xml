@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhirundl.website.dao.CMemberMapper" >
+  <resultMap id="CResultMap" type="com.zhirundl.website.model.CMember" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SEX" property="sex" jdbcType="VARCHAR" />
+    <result column="SALARY" property="salary" jdbcType="DECIMAL" />
+    <result column="DEPARTMENT" property="department" jdbcType="VARCHAR" />
+    <result column="AGE" property="age" jdbcType="DECIMAL" />
+    <result column="CID" property="cid" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="selectCMember" parameterType="CMember" resultType="CMember">
+
+    select * from MEMBER WHERE id = #{id}
+  </select>
+
+  <insert id="addAll" parameterType="java.util.List">
+    INSERT INTO MEMBER
+    (ID,NAME)
+    SELECT A.*
+    FROM(
+    <foreach collection="list" item="item" index="index" separator="UNION ALL">
+      SELECT
+      #{item.id,jdbcType=DECIMAL} ID,
+      #{item.name,jdbcType=VARCHAR} NAME
+      FROM dual
+    </foreach>
+    )A
+  </insert>
+  
+</mapper>
