@@ -3,5 +3,7 @@
 ### Example user template
 
 # IntelliJ project files
-.idea
-out
+*.iml
+/.idea
+/website/web/WEB-INF/classes
+/website/*.iml
