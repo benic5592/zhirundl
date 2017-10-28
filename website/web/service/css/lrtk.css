@@ -1,0 +1,17 @@
+/* 懒人图库 搜集整理 www.lanrentuku.com */
+/*reset css*/
+
+/*main css*/
+.izl-rmenu{position:fixed; right:0; margin-right:20px; bottom:20px; padding-bottom:20px; background:url(../images/r_b.png) 0px bottom no-repeat; z-index:999; }
+.izl-rmenu .izlbtn{width:72px; height:73px; margin-bottom:1px; cursor:pointer; position:relative;}
+.izl-rmenu .izlbtn-qq{background:url(../images/r_qq.png) 0px 0px no-repeat; background-color:#6da9de;}
+.izl-rmenu .izlbtn-qq:hover{background-color:#488bc7;}
+.izl-rmenu a.izlbtn-qq,.izl-rmenu a.izlbtn-qq:visited{background:url(../images/r_qq.png) 0px 0px no-repeat; background-color:#6da9de; text-decoration:none; display:block;}
+.izl-rmenu .izlbtn-wx{background:url(../images/r_wx.png) 0px 0px no-repeat; background-color:#78c340;}
+.izl-rmenu .izlbtn-wx:hover{background-color:#58a81c;}
+.izl-rmenu .izlbtn-wx .izlpic{background:url(../images/weixin.jpg) 0px 0px no-repeat; background-size: cover;position:absolute; left:-160px; top:0px;vertical-align:top; display:none;width:160px;height:160px;}
+.izl-rmenu .izlbtn-phone{background:url(../images/r_phone.png) 0px 0px no-repeat; background-color:#fbb01f;}
+.izl-rmenu .izlbtn-phone:hover{background-color:#ff811b;}
+.izl-rmenu .izlbtn-phone .phone{background-color:#ff811b; position:absolute; width:160px; left:-160px; top:0px; line-height:73px; color:#FFF; font-size:18px; text-align:center; display:none;}
+.izl-rmenu .izlbtn-top{background:url(../images/r_top.png) 0px 0px no-repeat; background-color:#666666; display:none;}
+.izl-rmenu .izlbtn-top:hover{background-color:#444;}
