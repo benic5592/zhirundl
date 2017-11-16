@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>【官网】知润教育  | Js实例</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../images/ico/favicon-1.ico">
+    <link rel="stylesheet" href="jsTest1.css">
+
+
+</head>
+
+<body>
+
+ <!--Header-->
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <span class="pull-left topspan">为企业输送优秀软件开发人才！做良心教育，我们是认真的！</span>
+                <span class="pull-right topspan">咨询电话：0411-62666800 | 0411-62666833</p>
+            </div>
+            <div class="container">
+	            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </a>
+	            <a id="logo" class="pull-left" href="index.html"></a>
+	            <div class="nav-collapse collapse pull-right">
+	                <ul class="nav">
+	                    <li><a href="../index.html">首页</a></li>
+	                    <li><a href="../about-us.html">知润故事|关于我们</a></li>
+	                    <li><a href="../services.html">课程中心</a></li>
+	                    <li><a href="../teacher.html">师资力量</a></li>
+	                    <li><a href="../unclassified.html">就业展示</a></li>
+	                    <li class="active"><a href="../portfolio.html">幽默谈技术</a></li>
+	                    <li><a href="../contact-us.html">预约报名</a></li>
+	                 </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+
+<section class="title">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span6">
+                <h1>Js实例1</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / .title -->
+
+<section id="about-us" class="container main">
+    <div class="container-fluid">
+        <div id="testDiv">
+            <a href="#"><h2>什么是JS？</h2></a>
+
+            <p>
+                &emsp;&emsp;
+                JavaScript是一种脚本语言,简称JS。它通常只能通过Web浏览器去完成某种操作，
+                而不能独立运行。JavaScript主要用于事件响应用户的某项操作，比如点击按钮，
+                滑动鼠标等。
+            </p>
+
+            <a href="#"><h3>下面的小例子，是用JavaScript来编写的俄罗斯方块游戏</h3></a>
+
+            <!--js例子开始-->
+            <div id="jsTest1">
+                <Input type="button" value="开始游戏" onclick="begin(this);"/>
+
+                <div id="scoreDiv">
+                    <span id="scoreContent">分数: <span id="score">  0</span></span>
+                </div>
+                <!--游戏显示区域-->
+                <table id="board">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <!--游戏说明区域-->
+                <span id="gameTip">
+                    游戏规则
+                    <ol>
+                        <li>每种图形下降的时间是0.5秒</li>
+                        <li>每次撤销1行，得1分</li>
+                        <li>每次撤销2行，得3分</li>
+                        <li>每次撤销3行，得6分</li>
+                        <li>每次撤销4行，得10分</li>
+                    </ol>
+                </span>
+            </div>
+            <!--js例子结束-->
+
+        </div>
+    </div>
+
+</section>
+
+<!--Footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row-fluid">
+        		<div class="span3">
+        			<h4>关注微信公众号</h4>
+        			<img src="../images/hkmovie.png" />
+        		</div>
+            <div class="span5  center">
+                <i style="font-size: 24px;" class="icon-rss icon-large"></i>
+                <p> Copyright &copy; 2017  <a href="##" target="_blank" title="知润">知润</a>. All Rights Reserved.</p>
+                <p>
+                    <span><a href="about-us.html">关于我们</a></span> | <a href="blog.html">知润故事</a> | <a href="contact-us.html">预约报名</a>
+                </p>
+            </div>
+            <!--/Copyright-->
+        </div>
+    </div>
+</footer>
+<!--/Footer-->
+<script src="js/vendor/jquery-1.9.1.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="jsTest1.js"></script>
+<!--美洽-->
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', 84164);
+</script>
+
+</body>
+</html>

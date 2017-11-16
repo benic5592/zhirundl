@@ -1,0 +1,23 @@
+.divTeacher1{
+    border-radius: 15px;
+    border:2px solid gainsboro;
+    background-color: white;
+    width: 880px;
+    margin: 0 auto;
+    min-height: 280px;
+    padding: 20px 30px 30px 30px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.teacherdiv img{
+    width: 180px;
+    height: 230px;
+    float: left;
+    margin-right: 30px;
+}
+
+article{
+    font-size: 18px;
+    line-height:40px;
+}
