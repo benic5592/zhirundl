@@ -69,6 +69,14 @@
                 </div>
             </div>
             <!--/Slider Item1-->
+            <!--Slider Item1-->
+            <div class="sl-slide item2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                <div class="sl-slide-inner">
+                    <div class="container">
+                    </div>
+                </div>
+            </div>
+            <!--/Slider Item1-->
     </div>
     <!--/Slider Items-->
 
@@ -178,7 +186,7 @@
                        <p class="fs14">2017年11月1日&emsp;&emsp;&emsp;&emsp;试听已结束</p>
                     </li>
                     <li class="plan-action">
-                        <a  target=_blank href='http://wpa.qq.com/msgrd?v=3&uin=805861238&site=qq&menu=yes' class="btn btn-transparent">QQ在线申请试听</a>
+                        <a  target=_blank href='http://wpa.qq.com/msgrd?v=3&uin=945618123&site=qq&menu=yes' class="btn btn-transparent">QQ在线申请试听</a>
                     		&emsp;&emsp;<a  target=_blank href='contact-us.html' class="btn btn-transparent">在线客服申请试听</a>
                     </li>
                 </ul>
@@ -199,7 +207,7 @@
                         <p class="fs14">2017年11月1日&emsp;&emsp;&emsp;&emsp;爆满已开课</p>
                     </li>
                     <li class="plan-action">
-                        <a  target=_blank href='http://wpa.qq.com/msgrd?v=3&uin=805861238&site=qq&menu=yes' class="btn btn-transparent">QQ在线预约报名</a>
+                        <a  target=_blank href='http://wpa.qq.com/msgrd?v=3&uin=945618123&site=qq&menu=yes' class="btn btn-transparent">QQ在线预约报名</a>
                     		&emsp;&emsp;<a  target=_blank href='contact-us.html' class="btn btn-transparent">在线客服预约报名</a>
                     </li>
                 </ul>
@@ -251,7 +259,7 @@
 <div class="zx">
 	<ul>
 		<li class="li_qq">
-			<a href="http://wpa.qq.com/msgrd?v=3&uin=805861238&site=qq&menu=yes" target="_blank">
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=945618123&site=qq&menu=yes" target="_blank">
 				<p style="margin: 10px 0 0;"><i class="icon-comments-alt" style="font-size: 18px;"></i></p>
 				<p>QQ咨询</p>	
 			</a>							
@@ -265,7 +273,7 @@
 		<li class="li_5 li_gd">
 			<p style="margin: 10px 0 0;"><i class="icon-phone" style="font-size: 18px;"></i></p>
 			<p>电话咨询</p>
-			<div style="display: none;">
+			<div style="display: none;height: 60px;">
 				<p><i class="icon-phone" style="font-size: 18px;"></i>&emsp;0411-62666800</p>
 			</div>
 		</li>
@@ -316,47 +324,5 @@ $(function() {
 });
 </script>
 <!-- /SL Slider -->
-    <script type="text/javascript">            
-$(".zx li").mouseenter(function(){
-	$(this).children("div").show();
-})
-$(".zx li").mouseleave(function(){
-	$(this).children("div").stop().hide();
-})	
-$(window).scroll(function(){
-	var A = $(window).scrollTop();
-
-	if(A > 400){
-		$("#back").css("visibility","visible");
-	}else{
-		$("#back").css("visibility","hidden");
-	}
-});
-$("#back").click(function(){
-	$("html,body").animate(
-		{
-			"scrollTop":0
-		},500
-	);	
-})
-</script>
-
-<!--qq-->
-<!--<script type="text/javascript" src="qq/qq.js" ></script>-->
-<!--美洽-->
-<script type='text/javascript'>
-    (function(m, ei, q, i, a, j, s) {
-        m[i] = m[i] || function() {
-            (m[i].a = m[i].a || []).push(arguments)
-        };
-        j = ei.createElement(q),
-            s = ei.getElementsByTagName(q)[0];
-        j.async = true;
-        j.charset = 'UTF-8';
-        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
-        s.parentNode.insertBefore(j, s);
-    })(window, document, 'script', '_MEIQIA');
-    _MEIQIA('entId', 84164);
-</script>
 </body>
 </html>
