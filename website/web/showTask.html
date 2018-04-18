@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务时间线</title>
+    <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="timeglider/Timeglider.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="timeglider/timeglider.datepicker.css" type="text/css" charset="utf-8">
+
+    <style type='text/css'>
+
+
+        .header {
+            margin:32px;
+        }
+
+        #placement {
+            margin:32px;
+            margin-bottom:0;
+            height:450px;
+        }
+
+
+
+        .timeglider-legend {
+            width:180px;
+        }
+
+
+        *.no-select {
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+
+        .timeglider-timeline-event.ongoing .timeglider-event-title {
+            color:green;
+        }
+
+
+
+        .dragger {
+            float:right;
+            width:40%;
+            text-align:right;
+            margin-right:8px;
+            font-size:18px;
+            color:green;
+            font-size:12px;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+<fieldset >
+    <div>
+        <label>开始时间:</label>
+        <input type="date" id="startTime" value="2018-01-01" />
+    </div>
+    <div>
+        <label>结束时间:</label>
+        <input type="date" id="endTime" value="2018-12-31" />
+    </div>
+    <button id="refresh">刷新</button>
+</fieldset><br>
+<fieldset >
+    <legend>添加</legend>
+    课程:<select name="taskName" id="taskName">
+    <option value="训练营">训练营</option>
+    <option value="java">java</option>
+    <option value="html">html</option>
+    <option value="数据库+servlet">数据库+servlet</option>
+    <option value="ssh+ssm">ssh+ssm</option>
+    <option value="大项目">大项目</option>
+    <option value="AngularJs">AngularJs</option>
+</select>
+    时间:<input type="date" name="dateFrom"  id="dateFrom" required> ～ <input type="date" name="dateTo" id="dateTo" required><br>
+    讲师:<select name="memberName"  id="memberName">
+    <option value="大王">大王</option>
+    <option value="万璐">万璐</option>
+    <option value="李淼">李淼</option>
+    <option value="姜贞">姜贞</option>
+    <option value="张犇">张犇</option>
+    <option value="汤汤">汤汤</option>
+</select><br>
+    内容:<input type="text" name="taskContent" id="taskContent"><br>
+    备注:<input type="text" name="comments" id="comments"><br>
+    <input type="button" id="insertTaskBtn" value="添加">
+</fieldset>
+
+<div id='placement'></div>
+
+<script src='js/jquery-1.11.0.min.js' type='text/javascript'></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/json2.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.tmpl.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ba-tinyPubSub.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.ui.ipad.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/globalize.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ba-debug.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/timeglider-1.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+
+
+<!-- JUST FOR KITCHEN SINK: NOT NEEDED FOR TG WIDGET -->
+<script src="js/jquery.ui.sortable.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/showTask.js"></script>
+</body>
+</html>

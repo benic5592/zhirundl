@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhirundl.website.dao.TaskModelMapper">
+  <resultMap id="BaseResultMap" type="com.zhirundl.website.model.TaskModel">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="TASK_NAME" jdbcType="VARCHAR" property="taskName" />
+    <result column="DATE_FROM" jdbcType="VARCHAR" property="dateFrom" />
+    <result column="DATE_TO" jdbcType="VARCHAR" property="dateTo" />
+    <result column="MEMBER_NAME" jdbcType="VARCHAR" property="memberName" />
+    <result column="TASK_CONTENT" jdbcType="VARCHAR" property="taskContent" />
+    <result column="COMMENTS" jdbcType="VARCHAR" property="comments" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ID, TASK_NAME, DATE_FROM, DATE_TO, MEMBER_NAME, TASK_CONTENT, COMMENTS
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_task
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_task
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zhirundl.website.model.TaskModel">
+    insert into t_task (ID, TASK_NAME, DATE_FROM, 
+      DATE_TO, MEMBER_NAME, TASK_CONTENT, 
+      COMMENTS)
+    values (#{id,jdbcType=INTEGER}, #{taskName,jdbcType=VARCHAR}, #{dateFrom,jdbcType=VARCHAR}, 
+      #{dateTo,jdbcType=VARCHAR}, #{memberName,jdbcType=VARCHAR}, #{taskContent,jdbcType=VARCHAR}, 
+      #{comments,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.zhirundl.website.model.TaskModel">
+    insert into t_task
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="taskName != null">
+        TASK_NAME,
+      </if>
+      <if test="dateFrom != null">
+        DATE_FROM,
+      </if>
+      <if test="dateTo != null">
+        DATE_TO,
+      </if>
+      <if test="memberName != null">
+        MEMBER_NAME,
+      </if>
+      <if test="taskContent != null">
+        TASK_CONTENT,
+      </if>
+      <if test="comments != null">
+        COMMENTS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="taskName != null">
+        #{taskName,jdbcType=VARCHAR},
+      </if>
+      <if test="dateFrom != null">
+        #{dateFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="dateTo != null">
+        #{dateTo,jdbcType=VARCHAR},
+      </if>
+      <if test="memberName != null">
+        #{memberName,jdbcType=VARCHAR},
+      </if>
+      <if test="taskContent != null">
+        #{taskContent,jdbcType=VARCHAR},
+      </if>
+      <if test="comments != null">
+        #{comments,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zhirundl.website.model.TaskModel">
+    update t_task
+    <set>
+      <if test="taskName != null">
+        TASK_NAME = #{taskName,jdbcType=VARCHAR},
+      </if>
+      <if test="dateFrom != null">
+        DATE_FROM = #{dateFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="dateTo != null">
+        DATE_TO = #{dateTo,jdbcType=VARCHAR},
+      </if>
+      <if test="memberName != null">
+        MEMBER_NAME = #{memberName,jdbcType=VARCHAR},
+      </if>
+      <if test="taskContent != null">
+        TASK_CONTENT = #{taskContent,jdbcType=VARCHAR},
+      </if>
+      <if test="comments != null">
+        COMMENTS = #{comments,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zhirundl.website.model.TaskModel">
+    update t_task
+    set TASK_NAME = #{taskName,jdbcType=VARCHAR},
+      DATE_FROM = #{dateFrom,jdbcType=VARCHAR},
+      DATE_TO = #{dateTo,jdbcType=VARCHAR},
+      MEMBER_NAME = #{memberName,jdbcType=VARCHAR},
+      TASK_CONTENT = #{taskContent,jdbcType=VARCHAR},
+      COMMENTS = #{comments,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+
+  <insert id="insertWithoutId" parameterType="com.zhirundl.website.model.TaskModel">
+    insert into t_task (TASK_NAME, DATE_FROM,
+      DATE_TO, MEMBER_NAME, TASK_CONTENT,
+      COMMENTS)
+    values ( #{taskName,jdbcType=VARCHAR}, #{dateFrom,jdbcType=VARCHAR},
+      #{dateTo,jdbcType=VARCHAR}, #{memberName,jdbcType=VARCHAR}, #{taskContent,jdbcType=VARCHAR},
+      #{comments,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectByDate" parameterType="com.zhirundl.website.model.TaskModel" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_task
+    where DATE_FROM >= #{dateFrom,jdbcType=VARCHAR} or DATE_TO &lt;= #{dateTo,jdbcType=VARCHAR}
+  </select>
+</mapper>

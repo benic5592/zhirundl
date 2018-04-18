@@ -1,0 +1,44 @@
+[
+  {
+    "id":"abc",
+    "title":"时间线",
+    "description":"",
+    "focus_date":"2018-01-01 00:00:00",
+    "initial_zoom":"39",
+    "image_lane_height":100,
+    "events":[
+      {
+        "id":"jshist-nojs",
+        "title": "There was no Javascript",
+        "description":"Amazingly, until Brendan Eich created Javascript in 1995, there was none.",
+        "startdate": "2018-01-01 12:00:00",
+        "enddate": "2018-06-01 12:00:00",
+        "low_threshold":0,
+        "high_threshold":52,
+        "importance":"60",
+        "date_display":"no",
+        "y_position":0,
+        "image":"",
+        "link":"",
+        "modal_type":"full",
+        "icon":"none"
+      },
+      {
+        "id":"jshist",
+        "title": "There was no Javascript",
+        "description":"Amazingly, until Brendan Eich created Javascript in 1995, there was none.",
+        "startdate": "2018-01-01 12:00:00",
+        "enddate": "2018-06-01 12:00:00",
+        "low_threshold":0,
+        "high_threshold":52,
+        "importance":"60",
+        "date_display":"no",
+        "y_position":0,
+        "icon":"none"
+      }
+    ],
+    "tags":{"mardigras":0,"chris":0,"arizona":0,"netscape":0,"flop":0},
+    "legend": [
+    ]
+  }
+]

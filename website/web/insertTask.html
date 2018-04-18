@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加任务</title>
+</head>
+<body>
+
+<form action="/website/task/insertWithoutId.action" method="post">
+
+    课程:<select name="taskName">
+            <option value="训练营">训练营</option>
+            <option value="java">java</option>
+            <option value="html">html</option>
+            <option value="数据库+servlet">数据库+servlet</option>
+            <option value="ssh+ssm">ssh+ssm</option>
+        </select><br>
+    时间:<input type="date" name="dateFrom" required> ～ <input type="date" name="dateTo" required><br>
+    讲师:<select name="memberName">
+            <option value="大王">大王</option>
+            <option value="万璐">万璐</option>
+            <option value="李淼">李淼</option>
+            <option value="姜贞">姜贞</option>
+            <option value="张犇">张犇</option>
+            <option value="汤汤">汤汤</option>
+        </select><br>
+    内容:<input type="text" name="taskContent"><br>
+    备注:<input type="text" name="comments"><br>
+    <input type="submit" value="添加">
+
+</form>
+
+</body>
+</html>
