@@ -14,7 +14,7 @@ $(function () {
 
 
 function insertTask() {
-    $.post('/website/task/insertWithoutId.action',{
+    $.post('/task/insertWithoutId.action',{
         taskName:$('#taskName').val(),
         memberName:$('#memberName').val(),
         dateFrom:$('#dateFrom').val(),
@@ -34,7 +34,7 @@ function insertTask() {
 
 
 function showTimeline() {
-    $.post('/website/task/selectTaskByDate.action',{
+    $.post('/task/selectTaskByDate.action',{
         dateFrom:$('#startTime').val(),
         dateTo:$('#endTime').val()
     },function (data) {
