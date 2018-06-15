@@ -42,6 +42,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/website/web/WEB-INF/lib/spring-context-support-4.3.9.RELEASE.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/website/web/WEB-INF/lib/spring-instrument-tomcat-4.3.9.RELEASE.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/website/web/WEB-INF/lib/spring-batch-infrastructure-3.0.7.RELEASE.jar" />
+          <element id="library" level="project" name="SSM" />
         </element>
       </element>
     </root>

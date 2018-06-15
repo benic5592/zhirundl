@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhirundl.website.dao.ClassDateModelMapper">
+  <resultMap id="BaseResultMap" type="com.zhirundl.website.model.ClassDateModel">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="CLASS_DATE" jdbcType="VARCHAR" property="classDate" />
+    <result column="CLASS_PROGRESS" jdbcType="VARCHAR" property="classProgress" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_class_date
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zhirundl.website.model.ClassDateModel">
+    insert into t_class_date (ID, CLASS_DATE, CLASS_PROGRESS)
+    values (#{id,jdbcType=INTEGER}, #{classDate,jdbcType=VARCHAR}, #{classProgress,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.zhirundl.website.model.ClassDateModel">
+    update t_class_date
+    set CLASS_DATE = #{classDate,jdbcType=VARCHAR},
+      CLASS_PROGRESS = #{classProgress,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select ID, CLASS_DATE, CLASS_PROGRESS
+    from t_class_date
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, CLASS_DATE, CLASS_PROGRESS
+    from t_class_date
+  </select>
+</mapper>
